@@ -40,3 +40,7 @@ Thư mục website tĩnh được tạo tại `out/`.
 4. Workflow `.github/workflows/deploy.yml` sẽ tự build và deploy.
 
 Workflow tự nhận biết base path của repository nên website chạy được cả ở repository thường và repository dạng `<username>.github.io`.
+
+## Lưu ý khi deploy
+
+`package-lock.json` đã dùng URL chính thức của npm (`registry.npmjs.org`). Workflow GitHub Actions sử dụng Node.js 22, chạy lần lượt `npm ci`, kiểm tra TypeScript và xuất website tĩnh vào thư mục `out`.
