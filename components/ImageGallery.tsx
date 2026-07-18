@@ -9,7 +9,7 @@ type GalleryImage = {
   caption?: string;
 };
 
-export function ImageGallery({ images, columns = 2 }: { images: GalleryImage[]; columns?: 2 | 3 }) {
+export function ImageGallery({ images, columns = 2 }: { images: GalleryImage[]; columns?: 1 | 2 | 3 }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   useEffect(() => {
